@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "clamscan": "^2.1.2",
     "electron": "^28.0.0"
   },
   "main": "window.js",
