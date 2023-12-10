@@ -8,6 +8,7 @@ const external = require("./external")
 function createWindow() {
     const display = require("electron").screen.getPrimaryDisplay();
 
+    // popup window location
     const win = new BrowserWindow({
         width: 750,
         height: 350,
