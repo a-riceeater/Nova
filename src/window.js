@@ -1,15 +1,21 @@
-const { app, BrowserView } = require("electron")
+const { app, BrowserWindow } = require("electron")
 const path = require("path")
 
 const scanner = require("./scanner")
 const external = require("./external")
 
+
 function createWindow() {
+    const display = require("electron").screen.getPrimaryDisplay();
+
     const win = new BrowserWindow({
-        width: 800,
-        height: 600,
+        width: 700,
+        height: 400,
+        x: display.bounds.width - 700,
+        y: display.bounds.height - 400,
         webPreferences: {
-            preload: path.join(__dirname, 'preload.js')
+            devTools: true
+            //preload: path.join(__dirname, 'preload.js')
         }
     })
 
