@@ -1,6 +1,9 @@
 const { app, BrowserView } = require("electron")
 const path = require("path")
 
+const scanner = require("./scanner")
+const external = require("./external")
+
 function createWindow() {
     const win = new BrowserWindow({
         width: 800,
