@@ -9,14 +9,16 @@ function createWindow() {
     const display = require("electron").screen.getPrimaryDisplay();
 
     const win = new BrowserWindow({
-        width: 700,
-        height: 400,
-        x: display.bounds.width - 700,
-        y: display.bounds.height - 400,
+        width: 750,
+        height: 350,
+        x: display.bounds.width - 750,
+        y: display.bounds.height - 350,
         webPreferences: {
             devTools: true
             //preload: path.join(__dirname, 'preload.js')
-        }
+        },
+        alwaysOnTop: true,
+        frame: false
     })
 
     win.loadFile(path.join(__dirname, "window", "window.html"))
